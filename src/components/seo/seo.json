@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_seo_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "cursor"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "string"
+    },
+    "metaImage": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "metaRobots": {
+      "type": "string"
+    },
+    "structuredData": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

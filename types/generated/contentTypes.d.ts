@@ -401,6 +401,9 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 255;
       }>;
+    license_status: Schema.Attribute.Enumeration<
+      ['active', 'pending', 'inactive', 'expired']
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -413,11 +416,6 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
         maxLength: 255;
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    status: Schema.Attribute.Enumeration<
-      ['active', 'inactive', 'pending', 'expired']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'active'>;
     type: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetMinMaxLength<{

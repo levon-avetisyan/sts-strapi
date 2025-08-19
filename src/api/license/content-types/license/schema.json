@@ -14,57 +14,47 @@
   "attributes": {
     "type": {
       "type": "string",
-      "required": true,
       "maxLength": 255,
-      "description": "License type name (e.g., 'State License Number', 'UBI Number', 'Sentricon Branch Code')"
+      "required": true
     },
     "number": {
       "type": "string",
-      "required": true,
       "maxLength": 255,
-      "description": "Actual license/certification number (e.g., '110747', '605885707', 'CSS#10222417')"
-    },
-    "status": {
-      "type": "enumeration",
-      "enum": [
-        "active",
-        "inactive",
-        "pending",
-        "expired"
-      ],
-      "required": true,
-      "default": "active",
-      "description": "Current status of the license"
+      "required": true
     },
     "category": {
       "type": "enumeration",
+      "required": true,
       "enum": [
         "license",
         "certification",
         "business",
         "insurance"
-      ],
-      "required": true,
-      "description": "Category of the license or credential"
+      ]
     },
     "isPublic": {
       "type": "boolean",
       "required": true,
-      "default": true,
-      "description": "Whether the license appears on the public website"
+      "default": true
     },
     "description": {
-      "type": "text",
-      "description": "Additional details about the license (e.g., 'Washington State Pest Control License')"
+      "type": "text"
     },
     "issuingAuthority": {
       "type": "string",
-      "maxLength": 255,
-      "description": "Organization that issued the license (e.g., 'Washington State Department of Agriculture')"
+      "maxLength": 255
     },
     "expirationDate": {
-      "type": "date",
-      "description": "Date when the license expires (if applicable)"
+      "type": "date"
+    },
+    "license_status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "pending",
+        "inactive",
+        "expired"
+      ]
     }
   }
 }

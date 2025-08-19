@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licenses",
+  "info": {
+    "singularName": "license",
+    "pluralName": "licenses",
+    "displayName": "License",
+    "description": "Business licenses and credentials management"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "description": "License type name (e.g., 'State License Number', 'UBI Number', 'Sentricon Branch Code')"
+    },
+    "number": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "description": "Actual license/certification number (e.g., '110747', '605885707', 'CSS#10222417')"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "pending",
+        "expired"
+      ],
+      "required": true,
+      "default": "active",
+      "description": "Current status of the license"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "license",
+        "certification",
+        "business",
+        "insurance"
+      ],
+      "required": true,
+      "description": "Category of the license or credential"
+    },
+    "isPublic": {
+      "type": "boolean",
+      "required": true,
+      "default": true,
+      "description": "Whether the license appears on the public website"
+    },
+    "description": {
+      "type": "text",
+      "description": "Additional details about the license (e.g., 'Washington State Pest Control License')"
+    },
+    "issuingAuthority": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "Organization that issued the license (e.g., 'Washington State Department of Agriculture')"
+    },
+    "expirationDate": {
+      "type": "date",
+      "description": "Date when the license expires (if applicable)"
+    }
+  }
+}

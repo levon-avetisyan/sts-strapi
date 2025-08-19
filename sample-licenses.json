@@ -1,0 +1,32 @@
+[
+  {
+    "type": "State License Number",
+    "number": "110747",
+    "status": "active",
+    "category": "license",
+    "isPublic": true,
+    "description": "Washington State Pest Control License",
+    "issuingAuthority": "Washington State Department of Agriculture",
+    "expirationDate": null
+  },
+  {
+    "type": "UBI Number",
+    "number": "605885707",
+    "status": "active",
+    "category": "business",
+    "isPublic": true,
+    "description": "Business Registration Number",
+    "issuingAuthority": "Washington State Department of Revenue",
+    "expirationDate": null
+  },
+  {
+    "type": "Sentricon Branch Code",
+    "number": "CSS#10222417",
+    "status": "active",
+    "category": "certification",
+    "isPublic": true,
+    "description": "Product Certification Code",
+    "issuingAuthority": "Dow AgroSciences",
+    "expirationDate": null
+  }
+]

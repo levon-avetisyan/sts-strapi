@@ -373,6 +373,62 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
+  collectionName: 'licenses';
+  info: {
+    description: 'Business licenses and credentials management';
+    displayName: 'License';
+    pluralName: 'licenses';
+    singularName: 'license';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      ['license', 'certification', 'business', 'insurance']
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    expirationDate: Schema.Attribute.Date;
+    isPublic: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<true>;
+    issuingAuthority: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::license.license'
+    > &
+      Schema.Attribute.Private;
+    number: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    status: Schema.Attribute.Enumeration<
+      ['active', 'inactive', 'pending', 'expired']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'active'>;
+    type: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 255;
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
@@ -924,6 +980,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::license.license': ApiLicenseLicense;
       'api::location.location': ApiLocationLocation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

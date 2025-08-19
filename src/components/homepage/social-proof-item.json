@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_homepage_social_proof_items",
+  "info": {
+    "displayName": "Social Proof Item",
+    "icon": "check",
+    "description": "Individual social proof item with number and label"
+  },
+  "options": {},
+  "attributes": {
+    "proofNumber": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "description": "Proof number or text (e.g., 'Retreatment', '24/7', 'Free')"
+    },
+    "proofLabel": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "description": "Proof label (e.g., 'Guarantee', 'Emergency Service', 'Estimates')"
+    }
+  }
+}

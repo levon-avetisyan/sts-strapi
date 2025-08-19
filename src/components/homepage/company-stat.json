@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_homepage_company_stats",
+  "info": {
+    "displayName": "Company Stat",
+    "icon": "chart",
+    "description": "Individual company statistic with number, label, and icon"
+  },
+  "options": {},
+  "attributes": {
+    "statNumber": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "description": "Statistic number (e.g., '15+', '1000+')"
+    },
+    "statLabel": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "description": "Statistic label (e.g., 'Years Experience', 'Happy Customers')"
+    },
+    "statIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "Icon for the statistic (optional but recommended)"
+    }
+  }
+}

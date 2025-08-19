@@ -2,7 +2,7 @@
   {
     "type": "State License Number",
     "number": "110747",
-    "status": "active",
+    "license_status": "active",
     "category": "license",
     "isPublic": true,
     "description": "Washington State Pest Control License",
@@ -12,7 +12,7 @@
   {
     "type": "UBI Number",
     "number": "605885707",
-    "status": "active",
+    "license_status": "active",
     "category": "business",
     "isPublic": true,
     "description": "Business Registration Number",
@@ -22,7 +22,7 @@
   {
     "type": "Sentricon Branch Code",
     "number": "CSS#10222417",
-    "status": "active",
+    "license_status": "active",
     "category": "certification",
     "isPublic": true,
     "description": "Product Certification Code",

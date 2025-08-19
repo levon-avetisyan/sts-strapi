@@ -373,6 +373,41 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
+  collectionName: 'homepages';
+  info: {
+    description: 'Homepage content for termite control company website';
+    displayName: 'Homepage';
+    pluralName: 'homepages';
+    singularName: 'homepage';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    heroSection: Schema.Attribute.Component<'homepage.hero-section', false> &
+      Schema.Attribute.Required;
+    howItWorksSection: Schema.Attribute.Component<
+      'homepage.how-it-works',
+      false
+    > &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::homepage.homepage'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
   collectionName: 'licenses';
   info: {
@@ -402,8 +437,10 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
         maxLength: 255;
       }>;
     license_status: Schema.Attribute.Enumeration<
-      ['active', 'pending', 'inactive', 'expired']
-    >;
+      ['active', 'inactive', 'pending', 'expired']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'active'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -978,6 +1015,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::homepage.homepage': ApiHomepageHomepage;
       'api::license.license': ApiLicenseLicense;
       'api::location.location': ApiLocationLocation;
       'plugin::content-releases.release': PluginContentReleasesRelease;

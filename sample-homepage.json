@@ -1,0 +1,54 @@
+{
+  "howItWorksSection": {
+    "sectionTitle": "How It Works",
+    "sectionSubtitle": "Our simple 4-step process protects your home from termites",
+    "processSteps": [
+      {
+        "stepNumber": "01",
+        "stepTitle": "Free Inspection",
+        "stepDescription": "Our certified technicians conduct a thorough inspection of your property to identify any existing termite activity, assess risk factors, and determine the best treatment approach for your specific situation.",
+        "iconLabel": "Magnifying glass icon representing inspection"
+      },
+      {
+        "stepNumber": "02",
+        "stepTitle": "Custom Treatment Plan",
+        "stepDescription": "Based on our inspection findings, we develop a personalized treatment plan that addresses your property's unique needs, including the most effective methods and products for long-term protection.",
+        "iconLabel": "Clipboard icon representing treatment planning"
+      },
+      {
+        "stepNumber": "03",
+        "stepTitle": "Install Protection",
+        "stepDescription": "Our experienced team implements the treatment plan using industry-leading products and techniques, ensuring complete coverage and maximum effectiveness against termite infestations.",
+        "iconLabel": "Shield icon representing protection installation"
+      },
+      {
+        "stepNumber": "04",
+        "stepTitle": "Ongoing Monitoring",
+        "stepDescription": "We provide continuous monitoring and maintenance to ensure your protection remains effective, with regular check-ups and treatments to keep your home termite-free year-round.",
+        "iconLabel": "Eye icon representing ongoing monitoring"
+      }
+    ]
+  },
+  "heroSection": {
+    "mainHeadline": "Protect Your Home",
+    "subHeadline": "Before It's Too Late",
+    "heroDescription": "Professional termite control services in the Pacific Northwest. Get your free inspection today and protect your biggest investment.",
+    "heroBackgroundImage": null,
+    "trustBadgeText": "Certified Technicians • Local Experts • Licensed & Insured",
+    "primaryCTAText": "Get Free Inspection Today",
+    "socialProofItems": [
+      {
+        "proofNumber": "Retreatment",
+        "proofLabel": "Guarantee"
+      },
+      {
+        "proofNumber": "24/7",
+        "proofLabel": "Emergency Service"
+      },
+      {
+        "proofNumber": "Free",
+        "proofLabel": "Estimates"
+      }
+    ]
+  }
+}

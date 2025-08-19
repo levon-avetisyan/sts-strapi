@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_homepage_service_highlights",
+  "info": {
+    "displayName": "Service Highlight",
+    "icon": "star",
+    "description": "Individual service highlight with icon, text, and accessibility label"
+  },
+  "options": {},
+  "attributes": {
+    "highlightIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "Icon for the service highlight (optional but recommended)"
+    },
+    "highlightText": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255,
+      "description": "Service highlight text (e.g., 'Licensed & Insured', 'Same Day Service')"
+    },
+    "iconLabel": {
+      "type": "string",
+      "required": false,
+      "maxLength": 255,
+      "description": "Accessibility label for the icon (screen reader text)"
+    }
+  }
+}

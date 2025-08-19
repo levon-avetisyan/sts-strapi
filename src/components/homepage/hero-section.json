@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_homepage_hero_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "icon": "crown",
+    "description": "Hero section with main headlines, description, and call-to-action"
+  },
+  "options": {},
+  "attributes": {
+    "mainHeadline": {
+      "type": "string",
+      "required": true,
+      "default": "Protect Your Home",
+      "maxLength": 255,
+      "description": "Main hero headline"
+    },
+    "subHeadline": {
+      "type": "string",
+      "required": true,
+      "default": "Before It's Too Late",
+      "maxLength": 255,
+      "description": "Sub headline below the main headline"
+    },
+    "heroDescription": {
+      "type": "text",
+      "required": true,
+      "description": "Hero section subtitle text"
+    },
+    "heroBackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "description": "Background image for the hero section"
+    },
+    "trustBadgeText": {
+      "type": "string",
+      "required": true,
+      "default": "Certified Technicians • Local Experts • Licensed & Insured",
+      "maxLength": 500,
+      "description": "Trust badge text displayed in the hero section"
+    },
+    "primaryCTAText": {
+      "type": "string",
+      "required": true,
+      "default": "Get Free Inspection Today",
+      "maxLength": 255,
+      "description": "Primary call-to-action button text"
+    },
+    "socialProofItems": {
+      "type": "component",
+      "component": "homepage.social-proof-item",
+      "repeatable": true,
+      "required": false,
+      "min": 1,
+      "max": 5,
+      "description": "Social proof items displayed in the hero section"
+    }
+  }
+}

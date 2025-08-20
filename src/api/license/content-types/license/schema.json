@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "licenses",
+  "info": {
+    "singularName": "license",
+    "pluralName": "licenses",
+    "displayName": "License"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "branch_address": {
+      "type": "text",
+      "required": true
+    },
+    "branch_text_sms_number": {
+      "type": "string",
+      "required": true
+    },
+    "branch_phone_number": {
+      "type": "string",
+      "required": true
+    },
+    "sentricon_branch_code_css": {
+      "type": "integer",
+      "required": true
+    },
+    "branch_email": {
+      "type": "email",
+      "required": true
+    },
+    "ubi_number": {
+      "type": "integer",
+      "required": true
+    },
+    "state_license_number": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}

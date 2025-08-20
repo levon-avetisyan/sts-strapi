@@ -373,6 +373,41 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
+  collectionName: 'licenses';
+  info: {
+    displayName: 'License';
+    pluralName: 'licenses';
+    singularName: 'license';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    branch_address: Schema.Attribute.Text & Schema.Attribute.Required;
+    branch_email: Schema.Attribute.Email & Schema.Attribute.Required;
+    branch_phone_number: Schema.Attribute.String & Schema.Attribute.Required;
+    branch_text_sms_number: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::license.license'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sentricon_branch_code_css: Schema.Attribute.Integer &
+      Schema.Attribute.Required;
+    state_license_number: Schema.Attribute.Integer & Schema.Attribute.Required;
+    ubi_number: Schema.Attribute.Integer & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   collectionName: 'locations';
   info: {
@@ -924,6 +959,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::license.license': ApiLicenseLicense;
       'api::location.location': ApiLocationLocation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

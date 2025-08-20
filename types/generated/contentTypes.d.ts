@@ -373,45 +373,9 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiHomepageHomepage extends Struct.CollectionTypeSchema {
-  collectionName: 'homepages';
-  info: {
-    description: 'Homepage content for termite control company website';
-    displayName: 'Homepage';
-    pluralName: 'homepages';
-    singularName: 'homepage';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    heroSection: Schema.Attribute.Component<'homepage.hero-section', false> &
-      Schema.Attribute.Required;
-    howItWorksSection: Schema.Attribute.Component<
-      'homepage.how-it-works',
-      false
-    > &
-      Schema.Attribute.Required;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::homepage.homepage'
-    > &
-      Schema.Attribute.Private;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
   collectionName: 'licenses';
   info: {
-    description: 'Business licenses and credentials management';
     displayName: 'License';
     pluralName: 'licenses';
     singularName: 'license';
@@ -420,44 +384,23 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    category: Schema.Attribute.Enumeration<
-      ['license', 'certification', 'business', 'insurance']
-    > &
-      Schema.Attribute.Required;
+    branch_address: Schema.Attribute.Text;
+    branch_email: Schema.Attribute.Email;
+    branch_phone_number: Schema.Attribute.String;
+    branch_text_sms_number: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text;
-    expirationDate: Schema.Attribute.Date;
-    isPublic: Schema.Attribute.Boolean &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<true>;
-    issuingAuthority: Schema.Attribute.String &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
-    license_status: Schema.Attribute.Enumeration<
-      ['active', 'inactive', 'pending', 'expired']
-    > &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'active'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::license.license'
     > &
       Schema.Attribute.Private;
-    number: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
     publishedAt: Schema.Attribute.DateTime;
-    type: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.SetMinMaxLength<{
-        maxLength: 255;
-      }>;
+    sentricon_branch_code_css: Schema.Attribute.Integer;
+    state_license_number: Schema.Attribute.Integer;
+    ubi_number: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1015,7 +958,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::homepage.homepage': ApiHomepageHomepage;
       'api::license.license': ApiLicenseLicense;
       'api::location.location': ApiLocationLocation;
       'plugin::content-releases.release': PluginContentReleasesRelease;

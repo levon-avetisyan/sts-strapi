@@ -4,59 +4,33 @@
   "info": {
     "singularName": "license",
     "pluralName": "licenses",
-    "displayName": "License",
-    "description": "Business licenses and credentials management"
+    "displayName": "License"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "type": {
-      "type": "string",
-      "maxLength": 255,
-      "required": true
-    },
-    "number": {
-      "type": "string",
-      "maxLength": 255,
-      "required": true
-    },
-    "category": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "license",
-        "certification",
-        "business",
-        "insurance"
-      ]
-    },
-    "license_status": {
-      "type": "enumeration",
-      "required": true,
-      "default": "active",
-      "enum": [
-        "active",
-        "inactive",
-        "pending",
-        "expired"
-      ]
-    },
-    "isPublic": {
-      "type": "boolean",
-      "required": true,
-      "default": true
-    },
-    "description": {
+    "branch_address": {
       "type": "text"
     },
-    "issuingAuthority": {
-      "type": "string",
-      "maxLength": 255
+    "branch_text_sms_number": {
+      "type": "string"
     },
-    "expirationDate": {
-      "type": "date"
+    "branch_phone_number": {
+      "type": "string"
+    },
+    "sentricon_branch_code_css": {
+      "type": "integer"
+    },
+    "branch_email": {
+      "type": "email"
+    },
+    "ubi_number": {
+      "type": "integer"
+    },
+    "state_license_number": {
+      "type": "integer"
     }
   }
 }

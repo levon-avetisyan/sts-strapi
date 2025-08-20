@@ -5,6 +5,7 @@
     "icon": "cursor"
   },
   "options": {},
+  "pluginOptions": {},
   "attributes": {
     "metaTitle": {
       "type": "string"

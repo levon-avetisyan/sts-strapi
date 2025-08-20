@@ -398,10 +398,11 @@ export interface ApiLicenseLicense extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    sentricon_branch_code_css: Schema.Attribute.Integer &
+    sentricon_branch_code_css: Schema.Attribute.BigInteger &
       Schema.Attribute.Required;
-    state_license_number: Schema.Attribute.Integer & Schema.Attribute.Required;
-    ubi_number: Schema.Attribute.Integer & Schema.Attribute.Required;
+    state_license_number: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required;
+    ubi_number: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

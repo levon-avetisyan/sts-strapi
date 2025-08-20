@@ -24,7 +24,7 @@
       "required": true
     },
     "sentricon_branch_code_css": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true
     },
     "branch_email": {
@@ -32,11 +32,11 @@
       "required": true
     },
     "ubi_number": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true
     },
     "state_license_number": {
-      "type": "integer",
+      "type": "biginteger",
       "required": true
     }
   }

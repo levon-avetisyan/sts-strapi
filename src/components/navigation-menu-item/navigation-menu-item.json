@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_navigation_navigation_menu_items",
+  "info": {
+    "displayName": "Navigation Menu Item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    },
+    "isExternal": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "config": {}
+}

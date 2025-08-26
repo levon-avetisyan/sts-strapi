@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_navigation_navigation_contacts",
+  "info": {
+    "displayName": "Navigation Contact",
+    "icon": "phone"
+  },
+  "options": {},
+  "pluginOptions": {},
+  "attributes": {
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "displayText": {
+      "type": "string",
+      "required": true
+    },
+    "href": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

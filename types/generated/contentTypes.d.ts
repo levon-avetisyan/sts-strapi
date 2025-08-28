@@ -451,45 +451,6 @@ export interface ApiLocationLocation extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
-  collectionName: 'navigations';
-  info: {
-    displayName: 'Navigation';
-    pluralName: 'navigations';
-    singularName: 'navigation';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    contact: Schema.Attribute.Component<
-      'navigation-contact.navigation-contact',
-      false
-    >;
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    cta: Schema.Attribute.Component<'navigation-cta.navigation-cta', false>;
-    isActive: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::navigation.navigation'
-    > &
-      Schema.Attribute.Private;
-    logo: Schema.Attribute.Component<'navigation-logo.navigation-logo', false> &
-      Schema.Attribute.Required;
-    menuItems: Schema.Attribute.Component<
-      'navigation-menu-item.navigation-menu-item',
-      true
-    >;
-    publishedAt: Schema.Attribute.DateTime;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1001,7 +962,6 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::license.license': ApiLicenseLicense;
       'api::location.location': ApiLocationLocation;
-      'api::navigation.navigation': ApiNavigationNavigation;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_protect_your_home_protect_your_homes",
+  "info": {
+    "displayName": "Protect your home"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Ready to Protect Your Home?"
+    },
+    "description": {
+      "type": "text",
+      "default": "Ready to Protect Your Home? Join thousands of satisfied homeowners who trust our certified experts. Free inspection and retreatment guarantee included."
+    },
+    "ctaButtonText1": {
+      "type": "string",
+      "default": "Get Free Inspection"
+    },
+    "ctaButtonText2": {
+      "type": "string",
+      "default": "Call (253) 200-4829"
+    },
+    "bg_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

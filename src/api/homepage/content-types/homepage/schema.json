@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "homepage_meta": {
+      "type": "component",
+      "component": "seo.seo",
+      "repeatable": false
+    },
+    "hero_section": {
+      "type": "component",
+      "component": "hero-section.hero_section"
+    },
+    "how_it_works_section": {
+      "type": "component",
+      "component": "how-it-works-section.how_it_works_section"
+    },
+    "about_section": {
+      "type": "component",
+      "component": "about-section.about_section"
+    },
+    "risk_assessment_section": {
+      "type": "component",
+      "component": "risk-assessment-section.risk_assessment_section"
+    },
+    "quote_section": {
+      "type": "component",
+      "component": "quote-section.quote_section"
+    }
+  }
+}

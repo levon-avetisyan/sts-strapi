@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_us_features_about_us_features",
+  "info": {
+    "displayName": "About us features"
+  },
+  "options": {},
+  "attributes": {
+    "feature_icon": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "feature_title": {
+      "type": "string"
+    },
+    "feature_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

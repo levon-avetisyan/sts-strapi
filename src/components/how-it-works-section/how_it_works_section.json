@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_how_it_works_section_how_it_works_sections",
+  "info": {
+    "displayName": "How It Works Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "How It Works"
+    },
+    "sectionSubtitle": {
+      "type": "text",
+      "default": "Our simple 4-step process protects your home from termites"
+    },
+    "how_it_works_steps": {
+      "type": "component",
+      "component": "how-it-works-steps.how-it-works-steps",
+      "repeatable": true
+    },
+    "protect_your_home": {
+      "type": "component",
+      "component": "protect-your-home.protect-your-home",
+      "repeatable": false
+    }
+  }
+}

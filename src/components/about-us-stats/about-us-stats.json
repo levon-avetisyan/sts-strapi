@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_about_us_stats_about_us_stats",
+  "info": {
+    "displayName": "About us stats"
+  },
+  "options": {},
+  "attributes": {
+    "stats_icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stats_title": {
+      "type": "string"
+    },
+    "stats_description": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_hero_section_hero_sections",
+  "info": {
+    "displayName": "Hero Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "trustBadgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "trustBadgeText": {
+      "type": "string",
+      "default": "Certified Technicians • Local Experts • Licensed & Insured"
+    },
+    "mainHeadlineLight": {
+      "type": "string",
+      "default": "Protect Your Home"
+    },
+    "mainHeadlineBold": {
+      "type": "string",
+      "default": "Before It's Too Late"
+    },
+    "subHeadline": {
+      "type": "string",
+      "default": "Expert termite inspections and treatments that help prevent thousands in damage."
+    },
+    "accentTextIcon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "accentText": {
+      "type": "string",
+      "default": "Same day service"
+    },
+    "ctaButtonText": {
+      "type": "string"
+    },
+    "features": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_risk_assessment_section_risk_assessment_sections",
+  "info": {
+    "displayName": "Risk Assessment Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitleLight": {
+      "type": "string",
+      "default": "Termite Risk"
+    },
+    "sectionTitleBold": {
+      "type": "string",
+      "default": "Assessment"
+    },
+    "sectionDescription": {
+      "type": "text",
+      "default": "Understand your property's vulnerability to termites with our comprehensive risk assessment. Get personalized recommendations based on your location and home construction."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Start Free Assessment"
+    },
+    "risk_features": {
+      "type": "json"
+    },
+    "top_accent_text": {
+      "type": "text",
+      "default": "Free Assessment • Expert Analysis • Personalized Results"
+    },
+    "risk_bg_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "company_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

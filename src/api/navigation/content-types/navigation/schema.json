@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "Navigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "navLinks": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "navCTA": {
+      "type": "string"
+    }
+  }
+}

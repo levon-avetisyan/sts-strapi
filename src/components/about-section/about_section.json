@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_about_section_about_sections",
+  "info": {
+    "displayName": "About Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "About Source Termite Solutions"
+    },
+    "description": {
+      "type": "string",
+      "default": "At Source Termite Solutions, we've been protecting homes and businesses from termite damage for over 15 years. Our team of certified professionals combines cutting-edge technology with proven methods to deliver effective termite control solutions."
+    },
+    "about_us_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about_us_stats": {
+      "type": "component",
+      "component": "about-us-stats.about-us-stats",
+      "repeatable": true
+    },
+    "about_us_features": {
+      "type": "component",
+      "component": "about-us-features.about-us-features",
+      "repeatable": true
+    }
+  }
+}

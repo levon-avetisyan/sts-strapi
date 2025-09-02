@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_get_quote_top_features_get_quote_top_features",
+  "info": {
+    "displayName": "Get quote top features"
+  },
+  "options": {},
+  "attributes": {
+    "feature_text": {
+      "type": "string"
+    },
+    "feature_icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,57 @@
+{
+  "collectionName": "components_quote_section_quote_sections",
+  "info": {
+    "displayName": "Quote Section",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "default": "Get Your Free Quote Today"
+    },
+    "getQuoteDescription": {
+      "type": "text",
+      "default": "Professional termite protection with 15+ years of trusted service. Free inspection and protection backed by our retreatment guarantee."
+    },
+    "get_quote_top_features": {
+      "type": "component",
+      "component": "get-quote-top-features.get-quote-top-features",
+      "repeatable": true
+    },
+    "trusted_by_thousands_title": {
+      "type": "string",
+      "default": "Trusted by Thousands"
+    },
+    "quote_section_stats": {
+      "type": "json"
+    },
+    "what_we_offer_title": {
+      "type": "string",
+      "default": "What We Offer"
+    },
+    "what_we_offer": {
+      "type": "json"
+    },
+    "need_help_now_title": {
+      "type": "string",
+      "default": "Need Immediate Help?"
+    },
+    "need_help_text": {
+      "type": "string",
+      "default": "Same-day service available"
+    },
+    "need_help_button_text": {
+      "type": "string",
+      "default": "Call Now"
+    },
+    "form_title": {
+      "type": "string",
+      "default": "Request Free Inspection"
+    },
+    "form_subtitle": {
+      "type": "text",
+      "default": "Get personalized protection tailored to your property's unique needs"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_legal_links",
+  "info": {
+    "displayName": "Legal Links",
+    "description": "Privacy policy and terms of service links"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Legal"
+    },
+    "links": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true
+    }
+  }
+}

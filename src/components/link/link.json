@@ -6,11 +6,19 @@
   },
   "options": {},
   "attributes": {
-    "text": {
+    "label": {
       "type": "string"
     },
     "url": {
       "type": "string"
+    },
+    "target": {
+      "type": "string",
+      "default": "_self"
+    },
+    "isExternal": {
+      "type": "string",
+      "default": "false"
     }
   }
 }

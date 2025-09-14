@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_test_component_test_components",
+  "info": {
+    "displayName": "Test Component",
+    "description": "A test component"
+  },
+  "options": {},
+  "attributes": {
+    "testField": {
+      "type": "string",
+      "default": "test"
+    }
+  }
+}

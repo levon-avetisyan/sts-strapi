@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_quick_links",
+  "info": {
+    "displayName": "Quick Links",
+    "description": "Navigation links for the footer"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Quick Links"
+    },
+    "links": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyInfo": {
+      "type": "component",
+      "component": "footer.company_info",
+      "repeatable": false
+    },
+    "quickLinks": {
+      "type": "component",
+      "component": "footer.quick_links",
+      "repeatable": false
+    },
+    "services": {
+      "type": "component",
+      "component": "footer.services",
+      "repeatable": false
+    },
+    "contactInfo": {
+      "type": "component",
+      "component": "footer.contact_info",
+      "repeatable": false
+    },
+    "legalLinks": {
+      "type": "component",
+      "component": "footer.legal_links",
+      "repeatable": false
+    },
+    "copyright": {
+      "type": "string",
+      "default": "© 2024 Source Termite Solutions. All rights reserved. v1.0.0"
+    }
+  }
+}

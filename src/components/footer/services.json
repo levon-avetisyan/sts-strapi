@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_services",
+  "info": {
+    "displayName": "Services",
+    "description": "List of services offered"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Our Services"
+    },
+    "services": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true
+    }
+  }
+}

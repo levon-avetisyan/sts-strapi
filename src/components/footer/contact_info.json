@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_footer_contact_info",
+  "info": {
+    "displayName": "Contact Info",
+    "description": "Contact information and operating hours"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Contact Us"
+    },
+    "phoneNumber": {
+      "type": "string",
+      "default": "(253) 200-4829"
+    },
+    "email": {
+      "type": "email",
+      "default": "info@sourcetermitesolutions.com"
+    },
+    "operatingHours": {
+      "type": "json",
+      "default": {
+        "weekdays": "Mon - Fri: 8:00 AM - 6:00 PM",
+        "saturday": "Sat: 9:00 AM - 4:00 PM",
+        "sunday": "Sun: Emergency Only"
+      }
+    },
+    "socialLinks": {
+      "type": "component",
+      "component": "footer.social_link",
+      "repeatable": true
+    }
+  }
+}

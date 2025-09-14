@@ -54,6 +54,92 @@ export interface AboutUsStatsAboutUsStats extends Struct.ComponentSchema {
   };
 }
 
+export interface FooterCompanyInfo extends Struct.ComponentSchema {
+  collectionName: 'components_footer_company_infos';
+  info: {
+    description: 'Company logo, name, and description';
+    displayName: 'Company Info';
+  };
+  attributes: {
+    companyName: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'TERMITE SOLUTIONS'>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Your trusted partner in comprehensive termite protection. With over 15 years of experience, we provide reliable, eco-friendly pest control solutions to protect your home and family.'>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
+export interface FooterContactInfo extends Struct.ComponentSchema {
+  collectionName: 'components_footer_contact_info';
+  info: {
+    description: 'Contact information and operating hours';
+    displayName: 'Contact Info';
+  };
+  attributes: {
+    email: Schema.Attribute.Email &
+      Schema.Attribute.DefaultTo<'info@sourcetermitesolutions.com'>;
+    operatingHours: Schema.Attribute.JSON &
+      Schema.Attribute.DefaultTo<{
+        saturday: 'Sat: 9:00 AM - 4:00 PM';
+        sunday: 'Sun: Emergency Only';
+        weekdays: 'Mon - Fri: 8:00 AM - 6:00 PM';
+      }>;
+    phoneNumber: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'(253) 200-4829'>;
+    socialLinks: Schema.Attribute.Component<'footer.social_link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Contact Us'>;
+  };
+}
+
+export interface FooterLegalLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_legal_links';
+  info: {
+    description: 'Privacy policy and terms of service links';
+    displayName: 'Legal Links';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'link.link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Legal'>;
+  };
+}
+
+export interface FooterQuickLinks extends Struct.ComponentSchema {
+  collectionName: 'components_footer_quick_links';
+  info: {
+    description: 'Navigation links for the footer';
+    displayName: 'Quick Links';
+  };
+  attributes: {
+    links: Schema.Attribute.Component<'link.link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Quick Links'>;
+  };
+}
+
+export interface FooterServices extends Struct.ComponentSchema {
+  collectionName: 'components_footer_services';
+  info: {
+    description: 'List of services offered';
+    displayName: 'Services';
+  };
+  attributes: {
+    services: Schema.Attribute.Component<'link.link', true>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Our Services'>;
+  };
+}
+
+export interface FooterSocialLink extends Struct.ComponentSchema {
+  collectionName: 'components_footer_social_links';
+  info: {
+    description: 'Social media link with icon';
+    displayName: 'Social Link';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images' | 'files'>;
+    platform: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface GetQuoteTopFeaturesGetQuoteTopFeatures
   extends Struct.ComponentSchema {
   collectionName: 'components_get_quote_top_features_get_quote_top_features';
@@ -142,7 +228,9 @@ export interface LinkLink extends Struct.ComponentSchema {
     displayName: 'Link';
   };
   attributes: {
-    text: Schema.Attribute.String;
+    isExternal: Schema.Attribute.String & Schema.Attribute.DefaultTo<'false'>;
+    label: Schema.Attribute.String;
+    target: Schema.Attribute.String & Schema.Attribute.DefaultTo<'_self'>;
     url: Schema.Attribute.String;
   };
 }
@@ -243,12 +331,29 @@ export interface SeoSeo extends Struct.ComponentSchema {
   };
 }
 
+export interface TestComponentTestComponent extends Struct.ComponentSchema {
+  collectionName: 'components_test_component_test_components';
+  info: {
+    description: 'A test component';
+    displayName: 'Test Component';
+  };
+  attributes: {
+    testField: Schema.Attribute.String & Schema.Attribute.DefaultTo<'test'>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'about-section.about_section': AboutSectionAboutSection;
       'about-us-features.about-us-features': AboutUsFeaturesAboutUsFeatures;
       'about-us-stats.about-us-stats': AboutUsStatsAboutUsStats;
+      'footer.company_info': FooterCompanyInfo;
+      'footer.contact_info': FooterContactInfo;
+      'footer.legal_links': FooterLegalLinks;
+      'footer.quick_links': FooterQuickLinks;
+      'footer.services': FooterServices;
+      'footer.social_link': FooterSocialLink;
       'get-quote-top-features.get-quote-top-features': GetQuoteTopFeaturesGetQuoteTopFeatures;
       'hero-section.hero_section': HeroSectionHeroSection;
       'how-it-works-section.how_it_works_section': HowItWorksSectionHowItWorksSection;
@@ -258,6 +363,7 @@ declare module '@strapi/strapi' {
       'quote-section.quote_section': QuoteSectionQuoteSection;
       'risk-assessment-section.risk_assessment_section': RiskAssessmentSectionRiskAssessmentSection;
       'seo.seo': SeoSeo;
+      'test-component.test_component': TestComponentTestComponent;
     }
   }
 }

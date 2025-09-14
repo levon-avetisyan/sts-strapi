@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_footer_company_infos",
+  "info": {
+    "displayName": "Company Info",
+    "description": "Company logo, name, and description"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "companyName": {
+      "type": "string",
+      "default": "TERMITE SOLUTIONS"
+    },
+    "description": {
+      "type": "text",
+      "default": "Your trusted partner in comprehensive termite protection. With over 15 years of experience, we provide reliable, eco-friendly pest control solutions to protect your home and family."
+    }
+  }
+}

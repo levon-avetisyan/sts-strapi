@@ -373,6 +373,135 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiAboutUsAboutUs extends Struct.CollectionTypeSchema {
+  collectionName: 'about_uses';
+  info: {
+    displayName: 'About us';
+    pluralName: 'about-uses';
+    singularName: 'about-us';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    about_us_article: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'At Source Marketing, we empower our employees by being the cornerstone of their professional and personal growth. We are committed to providing opportunities, resources, and support that enable our team members to gain the skills, knowledge, and financial success needed to achieve their individual and family goals. By fostering a culture of continuous learning and innovation, we strive to be the source of inspiration and success for our clients, our team, and our community.'>;
+    about_us_button_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our values'>;
+    about_us_features: Schema.Attribute.Component<
+      'about-us-features.about-us-features',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::about-us.about-us'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section_title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'About Us'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiFooterFooter extends Struct.CollectionTypeSchema {
+  collectionName: 'footers';
+  info: {
+    displayName: 'Footer';
+    pluralName: 'footers';
+    singularName: 'footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    footer_copyright: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u00A9 2025 Source MRKTG. All rights reserved. 0.1.6'>;
+    footer_links: Schema.Attribute.Component<'footer-links.footer-links', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::footer.footer'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiHeroHero extends Struct.CollectionTypeSchema {
+  collectionName: 'heroes';
+  info: {
+    displayName: 'Hero';
+    pluralName: 'heroes';
+    singularName: 'hero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero_button_text: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'JOIN US TODAY'>;
+    hero_subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Inspiring confidence in their ability to provide for themselves and their families.'>;
+    hero_title: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Our mission is to empower our employees to realize and maximize their earning potential'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::hero.hero'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiJoinOurTeamJoinOurTeam extends Struct.CollectionTypeSchema {
+  collectionName: 'join_our_teams';
+  info: {
+    displayName: 'Join Our Team';
+    pluralName: 'join-our-teams';
+    singularName: 'join-our-team';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    how_it_works: Schema.Attribute.Component<'how-it-works.how-it-works', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::join-our-team.join-our-team'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section_subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<"We're looking for motivated individuals to join our team as independent sales professionals. If you're goal-oriented, have a reliable vehicle, and are excited about a 1099 commission-based opportunity, we'd love to hear from you! Answer the quick questionnaire below to see if you're a great fit for this exciting role.">;
+    section_title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Join Our Dynamic Team!'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
   collectionName: 'navigations';
   info: {
@@ -396,6 +525,109 @@ export interface ApiNavigationNavigation extends Struct.CollectionTypeSchema {
     nav_links: Schema.Attribute.Component<'nav-links.nav-links', true>;
     nav_logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOurValuesSectionOurValuesSection
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'our_values_sections';
+  info: {
+    displayName: 'Our values section';
+    pluralName: 'our-values-sections';
+    singularName: 'our-values-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::our-values-section.our-values-section'
+    > &
+      Schema.Attribute.Private;
+    our_values_items: Schema.Attribute.Component<
+      'our-values-items.our-values-items',
+      true
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    section_subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Guiding Principles That Shape Our Journey to Excellence'>;
+    section_title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Our Values'>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTrustedByTrustedBy extends Struct.CollectionTypeSchema {
+  collectionName: 'trusted_bies';
+  info: {
+    displayName: 'Trusted by';
+    pluralName: 'trusted-bies';
+    singularName: 'trusted-by';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::trusted-by.trusted-by'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section_title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Trusted By'>;
+    trusted_by_logos: Schema.Attribute.Component<
+      'trusted-by-logos.trusted-by-logos',
+      true
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiWhatOurClientsSayWhatOurClientsSay
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'what_our_clients_says';
+  info: {
+    displayName: 'What Our Clients Say';
+    pluralName: 'what-our-clients-says';
+    singularName: 'what-our-clients-say';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    clinet_reviews: Schema.Attribute.Component<
+      'client-reviews.clinet-reviews',
+      true
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::what-our-clients-say.what-our-clients-say'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    section_title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'What Our Clients Say'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -911,7 +1143,14 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::about-us.about-us': ApiAboutUsAboutUs;
+      'api::footer.footer': ApiFooterFooter;
+      'api::hero.hero': ApiHeroHero;
+      'api::join-our-team.join-our-team': ApiJoinOurTeamJoinOurTeam;
       'api::navigation.navigation': ApiNavigationNavigation;
+      'api::our-values-section.our-values-section': ApiOurValuesSectionOurValuesSection;
+      'api::trusted-by.trusted-by': ApiTrustedByTrustedBy;
+      'api::what-our-clients-say.what-our-clients-say': ApiWhatOurClientsSayWhatOurClientsSay;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

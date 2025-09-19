@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "heroes",
+  "info": {
+    "singularName": "hero",
+    "pluralName": "heroes",
+    "displayName": "Hero"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "hero_title": {
+      "type": "text",
+      "default": "Our mission is to empower our employees to realize and maximize their earning potential"
+    },
+    "hero_subtitle": {
+      "type": "text",
+      "default": "Inspiring confidence in their ability to provide for themselves and their families."
+    },
+    "hero_button_text": {
+      "type": "string",
+      "default": "JOIN US TODAY"
+    }
+  }
+}

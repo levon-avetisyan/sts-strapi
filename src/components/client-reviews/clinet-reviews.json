@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_client_reviews_clinet_reviews",
+  "info": {
+    "displayName": "Clinet reviews"
+  },
+  "options": {},
+  "attributes": {
+    "review_title": {
+      "type": "string"
+    },
+    "review_text": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}

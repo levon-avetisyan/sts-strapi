@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "join_our_teams",
+  "info": {
+    "singularName": "join-our-team",
+    "pluralName": "join-our-teams",
+    "displayName": "Join Our Team"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "default": "Join Our Dynamic Team!"
+    },
+    "section_subtitle": {
+      "type": "text",
+      "default": "We're looking for motivated individuals to join our team as independent sales professionals. If you're goal-oriented, have a reliable vehicle, and are excited about a 1099 commission-based opportunity, we'd love to hear from you! Answer the quick questionnaire below to see if you're a great fit for this exciting role."
+    },
+    "how_it_works": {
+      "type": "component",
+      "component": "how-it-works.how-it-works",
+      "repeatable": true
+    }
+  }
+}

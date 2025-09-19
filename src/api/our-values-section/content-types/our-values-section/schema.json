@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_values_sections",
+  "info": {
+    "singularName": "our-values-section",
+    "pluralName": "our-values-sections",
+    "displayName": "Our values section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "default": "Our Values"
+    },
+    "section_subtitle": {
+      "type": "text",
+      "default": "Guiding Principles That Shape Our Journey to Excellence"
+    },
+    "our_values_items": {
+      "type": "component",
+      "component": "our-values-items.our-values-items",
+      "repeatable": true
+    }
+  }
+}

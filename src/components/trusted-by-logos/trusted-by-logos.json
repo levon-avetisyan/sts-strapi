@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_trusted_by_logos_trusted_by_logos",
+  "info": {
+    "displayName": "Trusted by logos"
+  },
+  "options": {},
+  "attributes": {
+    "logo_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

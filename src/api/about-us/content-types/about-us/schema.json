@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About us"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section_title": {
+      "type": "string",
+      "default": "About Us"
+    },
+    "about_us_article": {
+      "type": "text",
+      "default": "At Source Marketing, we empower our employees by being the cornerstone of their professional and personal growth. We are committed to providing opportunities, resources, and support that enable our team members to gain the skills, knowledge, and financial success needed to achieve their individual and family goals. By fostering a culture of continuous learning and innovation, we strive to be the source of inspiration and success for our clients, our team, and our community."
+    },
+    "about_us_button_text": {
+      "type": "string",
+      "default": "Our values"
+    },
+    "about_us_features": {
+      "type": "component",
+      "component": "about-us-features.about-us-features",
+      "repeatable": true
+    }
+  }
+}

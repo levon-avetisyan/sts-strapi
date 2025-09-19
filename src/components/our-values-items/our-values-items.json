@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_our_values_items_our_values_items",
+  "info": {
+    "displayName": "Our values items"
+  },
+  "options": {},
+  "attributes": {
+    "item_title": {
+      "type": "string"
+    },
+    "item_icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "item_description": {
+      "type": "text"
+    }
+  },
+  "config": {}
+}
